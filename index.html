@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMGC Registration Portal</title>
+    <!--  Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 col-md-6 m-auto mt-1 pb-5 bg-white shadow-sm rounded rounded-3">
+                <div class="text-center">
+                    <img src="./assets/images/logo.png" alt="Logo" class="img-fluid w-25 mt-4">
+                    <h1 class="text-danger fw-bolder"> Registration Portal </h1>
+                    <h4 class="fw-bold">Sign up for Image and Glory Conference, 2023.</h4>
+                    <h6>20th - 26th November, 2023</h6>
+                </div>
+                <hr>
+                <div class="mt-5 px-3">
+                    <form id="signup-form" action="#">
+
+                        <!-- SignUp Section -->
+                        <section class="signUp" id="signUp">
+                            <h6 class="text-center">Kindly fill the form below correctly</h6>
+                            <div class="form-group mt-3">
+                                <label for="email" class="fw-bold">Email Address<span
+                                        class="text-danger">*</span></label>
+                                <input id="email" class="form-control" type="email" name="email"
+                                    placeholder="example@example.com">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="lname" class="fw-bold">Surname <span class="text-danger">*</span></label>
+                                <input id="lname" class="form-control" type="text" name="lname" placeholder="Surname">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="fname" class="fw-bold">First Name <span class="text-danger">*</span></label>
+                                <input id="fname" class="form-control" type="text" name="fname"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="phone" class="fw-bold">Phone Number <span
+                                        class="text-danger">*</span></label>
+                                <input id="phone" class="form-control" type="tel" name="phone"
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="gender" class="fw-bold">Gender <span class="text-danger">*</span></label>
+                                <select id="gender" class="form-control" name="gender">
+                                    <option value="">Choose</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <span class="d-block mb-2" class="fw-bold">Age Range<span
+                                        class="text-danger">*</span></span>
+                                <input type="radio" id="age name=" age" value="below12">
+                                <label for="below12"> Below 12</label><br>
+                                <input type="radio" id="age" name="age" value="12 to 17">
+                                <label for="secondAge"> 12 to 17</label><br>
+                                <input type="radio" id="age" name="age" value="16 to 24">
+                                <label for="thirdAge">18 to 24</label><br>
+                                <input type="radio" id="age" name="age" value="25 to 34">
+                                <label for="fourthAge">25 to 34</label><br>
+                                <input type="radio" id="age" name="age" value="35 to 44">
+                                <label for="fifthAge">35 to 44</label><br>
+                                <input type="radio" id="age" name="age" value="45 and above" checked>
+                                <label for="sixthAge">45 and above</label>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="Occupation" class="fw-bold">Occupation <span
+                                        class="text-danger">*</span></label>
+                                <select id="occupation" class="form-control" name="occupation">
+                                    <option value="">Choose</option>
+                                    <option value="student">Student</option>
+                                    <option value="worker">Worker</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="city" class="fw-bold">City <span class="text-danger">*</span></label>
+                                <input id="city" class="form-control" type="text" name="city" id="city"
+                                    placeholder="Your answer">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="country" class="fw-bold">Country <span class="text-danger">*</span></label>
+                                <input id="country" class="form-control" type="text" name="country" id="country"
+                                    placeholder="Your answer">
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger" id="next-button-1"
+                                    onclick="signUpFields()">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Conference Entry Section -->
+                        <section class="conference" id="conference">
+                            <h5 class="bg-dark text-white p-1">Conference Entry</h5>
+                            <div class="form-group mt-3">
+                                <span class="d-block mb-2 fw-bold">What Day are you resuming?</span>
+                                <input type="radio" id="day" name="day" value="day1">
+                                <label for="day1"> Monday (Day 1)</label><br>
+                                <input type="radio" id="day" name="day" value="day2">
+                                <label for="day2"> Tuesday (Day 2)</label><br>
+                                <input type="radio" id="day" name="day" value="day3">
+                                <label for="day3"> Wednesday (Day 3)</label><br>
+                                <input type="radio" id="day" name="day" value="day4">
+                                <label for="day4"> Thursday (Day 4)</label><br>
+                                <input type="radio" id="day" name="day" value="day5">
+                                <label for="day5"> Friday (Day 5)</label><br>
+                                <input type="radio" id="day" name="day" value="day6">
+                                <label for="day6"> Monday (Day 1)</label><br>
+                                <input type="radio" id="day" name="day" value="day7">
+                                <label for="day7"> Monday (Day 7)</label><br>
+                            </div>
+                            <div class="form-group mt-3">
+                                <span class="d-block mb-2 fw-bold">Do you have a dependent? <span
+                                        class="text-danger">*</span></span>
+                                <input type="radio" id="yesDependent" name="dependant" value="yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="noDependent" name="dependant" value="no">
+                                <label for="no"> No</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger" id="prev-button-2">Back</button>
+                                <button type="button" class="btn btn-danger" id="next-button-2">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Dependant Section -->
+                        <section class="dependant" id="dependant">
+                            <h5 class="bg-dark text-white p-1">Dependant <span class="text-danger">*</span></h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2">What is the SEX and AGE RANGE per dependant?</span>
+                                <table class="table table-responsive table-borderless">
+                                    <thead>
+                                        <th class="col-2"></th>
+                                        <th>0-1year</th>
+                                        <th>2-4year</th>
+                                        <th>5-7years</th>
+                                        <th>8-10year</th>
+                                    </thead>
+                                    <tr>
+                                        <td>Male</td>
+                                        <td><input type="checkbox" id="year1_male" name="year1_male" value="0-1m">
+                                        </td>
+                                        <td><input type="checkbox" id="year2_male" name="year2_male" value="2-4m">
+                                        </td>
+
+                                        <td><input type="checkbox" id="year3_male" name="year3_male" value="5-7m">
+                                        </td>
+                                        <td><input type="checkbox" id="year4_male" name="year4_male" value="8-10m">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Female</td>
+                                        <td><input type="checkbox" id="year1_female" name="year_female" value="0-1f">
+                                        </td>
+                                        <td><input type="checkbox" id="year2_female" name="year_female" value="2-4f">
+                                        </td>
+
+                                        <td><input type="checkbox" id="year3_female" name="year_female" value="5-7f">
+                                        </td>
+                                        <td><input type="checkbox" id="year4_female" name="year_female" value="8-10f">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-3">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-3">Next</button>
+                            </div>
+                        </section>
+                        <!-- Attendance Section -->
+                        <section class="attendance" id="attendance">
+                            <h5 class="bg-dark text-white p-1">Attendance</h5>
+                            <div class="form-group mt-3">
+                                <label for="attendance" class=" fw-bold">Mode of Attendance<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-control" name="attend" id="attendanceSelect">
+                                    <option value="">Choose</option>
+                                    <option value="phy">Physical Attendance</option>
+                                    <option value="online">Online Stream</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="attendance" class="fw-bold d-block">Are you camping? <span
+                                        class="text-danger">*</span></label>
+                                <input type="radio" id="yesCamping" name="camping" value="yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="noCamping" name="camping" value="no">
+                                <label for="no"> No</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-4">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-4">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Camping facilitySection -->
+                        <section class="camping" id="camping">
+                            <h5 class="bg-dark text-white p-1">Camping</h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2 fw-bold">Making your choice of camping facility</span>
+                                <input type="radio" id="hostel" name="camping_facility" value="16 bed hostel">
+                                <label for="yes_camping"> 16 bed hostel</label><br>
+                                <input type="radio" id="guest" name="camping_facility" value="guest house">
+                                <label for="no_camping"> Guest house</label><br>
+                                <input type="radio" id="alt" name="camping_facility" value="alternative">
+                                <label for="alt"> Alternative</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-5">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-5">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Ministering Section -->
+                        <section class="ministeries" id="ministeries">
+                            <h5 class="bg-dark text-white p-1">Ministering </h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2 fw-bold">Are you a minister <span
+                                        class="text-danger">*</span></span>
+                                <input type="radio" id="yes_minister" name="minister" value="yes">
+                                <label for="yes_minister"> Yes</label><br>
+                                <input type="radio" id="no_minister" name="minister" value="no">
+                                <label for="no_minister"> No</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-6">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-6">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Ministers Section -->
+                        <section class="minister" id="minister">
+                            <h5 class="bg-dark text-white p-1">Ministers </h5>
+                            <div class="form-group  mt-3">
+                                <label for="church">Name of Church/Fellowship <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" name="church" id="church"
+                                    placeholder="Your answer">
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-7">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm" id="next-button-7"
+                                    onclick="ministersFields()">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- Are You a TCGC Member Section -->
+                        <section class="tcgc" id="tcgc">
+                            <h5 class="bg-dark text-white p-1">TCGC</h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2 fw-bold"> Are you a member of TCGC? <span
+                                        class="text-danger">*</span></span>
+                                <input type="radio" id="yes" name="member" value="yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="no" name="member" value="no">
+                                <label for="no"> No</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-8">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-8">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- IMGC Workforce Section -->
+                        <section class="imgc" id="imgc">
+                            <h5 class="bg-dark text-white p-1">IMGC'23 Workforce</h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2 fw-bold"> Are you in a Service Unit?</span>
+                                <input type="radio" id="yesImgc" name="imgc" value="yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="noImgc" name="imgc" value="no">
+                                <label for="no"> No</label>
+                            </div>
+                            <div class="form-group  mt-3">
+                                <label for="email" class="fw-bold">State the Unit</label>
+                                <input class="form-control" type="email" name="email" placeholder="Your answer here">
+                            </div>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2 fw-bold"> Are you interested in daily lunch?</span>
+                                <input type="radio" id="yesLunch" name="lunch" value="yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="noLunch" name="lunch" value="no">
+                                <label for="noLunch"> No</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-9">Back</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                    id="next-button-9">Next</button>
+                            </div>
+                        </section>
+
+                        <!-- First Time Section -->
+                        <section class="firstTime" id="firstTime">
+                            <h5 class="bg-dark text-white p-1">First Time?</h5>
+                            <div class="form-group  mt-3">
+                                <span class="d-block mb-2"> Is this your first time attending IMGC? <span
+                                        class="text-danger">*</span></span>
+                                <input type="radio" id="yesFirst" name="firstTime" value="yes">
+                                <label for="yesFirst"> Yes</label><br>
+                                <input type="radio" id="noFirst" name="firstTime" value="no">
+                                <label for="noFirst"> No</label>
+                                <div class="mt-4">
+                                    <button type="button" class="btn btn-danger shadow-sm"
+                                        id="prev-button-10">Back</button>
+                                    <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                        id="next-button-10">Next</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Expectations Section -->
+                        <section class="expectation" id="expectation">
+                            <h5 class="bg-dark text-white p-1">Expectations</h5>
+                            <div class="form-group  mt-3">
+                                <label for="exp" class="fw-bold">What is your expectation for this year's conferece?
+                                    <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" name="exp" id="exp" placeholder="Your answer">
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-11">Back</button>
+                                <button type="submit" class="btn btn-success ms-2 shadow-sm" id="next-button-11"
+                                    onclick="expectationFields()">Submit</button>
+                            </div>
+                        </section>
+
+                        <!-- Pass Experience Section -->
+                        <section class="past" id="past">
+                            <h5 class="bg-dark text-white p-1 fw-bold">Past Experience <span
+                                    class="text-danger">*</span></h5>
+                            <div class="form-group  mt-3">
+                                <label for="past_exp" class="fw-bold">In one sentence, share your experience attending
+                                    the
+                                    past
+                                    conference
+                                    <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" name="exp" id="past_exp"
+                                    placeholder="Your answer">
+                            </div>
+                            <div class="mt-4">
+                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-12">Back</button>
+                                <button type="submit" class="btn btn-success ms-2 shadow-sm" id="next-button-12"
+                                    onclick="pastFields()">Submit</button>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/index.js"></script>
+    <script src="ind.js"></script>
+</body>
+
+</html>

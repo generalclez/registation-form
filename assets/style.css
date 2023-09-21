@@ -1,0 +1,19 @@
+.conference,
+.dependant,
+.attendance,
+.camping,
+.ministeries,
+.minister,
+.tcgc,
+.firstTime,
+.imgc,
+.expectation,
+.past {
+  display: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: teal;
+  border: none;
+}
