@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const conferenceSection = document.getElementById("conference");
   const dependantSection = document.getElementById("dependant");
   const attendanceSection = document.getElementById("attendance");
-  const campingSection = document.getElementById("camping");
   const ministeriesSection = document.getElementById("ministeries");
   const ministerSection = document.getElementById("minister");
   const tcgcSection = document.getElementById("tcgc");
@@ -26,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const dependantRadio = document.querySelector(
       "input[name='dependant']:checked"
     );
-    if (dependantRadio && dependantRadio.value === "yes") {
+    if (dependantRadio && dependantRadio.value === "True") {
       // User has dependents, go to Dependant section
       conferenceSection.style.display = "none";
       dependantSection.style.display = "block";
-    } else if (dependantRadio && dependantRadio.value === "no") {
+    } else if (dependantRadio && dependantRadio.value === "False") {
       // User does not have dependents, go to Attendance section
       conferenceSection.style.display = "none";
       attendanceSection.style.display = "block";
@@ -47,50 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Next button for Dependant section
-  const nextButton3 = document.getElementById("next-button-3");
-  nextButton3.addEventListener("click", function () {
-    dependantSection.style.display = "none";
-    attendanceSection.style.display = "block";
-  });
+  // const nextButton3 = document.getElementById("next-button-3");
+  // nextButton3.addEventListener("click", function () {
+  //   dependantSection.style.display = "none";
+  //   attendanceSection.style.display = "block";
+  // });
 
   // Previous button for Attendance section
   const prevButton4 = document.getElementById("prev-button-4");
   prevButton4.addEventListener("click", function () {
     attendanceSection.style.display = "none";
     conferenceSection.style.display = "block";
-  });
-
-  // Next button for Attendance section
-  const nextButton4 = document.getElementById("next-button-4");
-  nextButton4.addEventListener("click", function () {
-    const campingRadio = document.querySelector(
-      "input[name='camping']:checked"
-    );
-    if (campingRadio && campingRadio.value === "yes") {
-      // User want to camp, go to Camping section
-      attendanceSection.style.display = "none";
-      campingSection.style.display = "block";
-    } else if (campingRadio && campingRadio.value === "no") {
-      // User does not want to camp, go to Ministeries section
-      attendanceSection.style.display = "none";
-      ministeriesSection.style.display = "block";
-    } else {
-      alert("Please select whether you'll be camping.");
-    }
-  });
-
-  // Previous button for Camping section
-  const prevButton5 = document.getElementById("prev-button-5");
-  prevButton5.addEventListener("click", function () {
-    campingSection.style.display = "block";
-    attendanceSection.style.display = "none";
-  });
-
-  // Next button for Camping section
-  const nextButton5 = document.getElementById("next-button-5");
-  nextButton5.addEventListener("click", function () {
-    campingSection.style.display = "none";
-    ministeriesSection.style.display = "block";
   });
 
   // Previous button for Ministeries section
@@ -104,13 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton6 = document.getElementById("next-button-6");
   nextButton6.addEventListener("click", function () {
     const ministerRadio = document.querySelector(
-      "input[name='minister']:checked"
+      "input[name='are_you_a_minister']:checked"
     );
-    if (ministerRadio && ministerRadio.value === "yes") {
-      // User is a minister, go to Minister section
+    if (ministerRadio && ministerRadio.value === "True") {
+      // User is a minister, go to Minister1 section
       ministeriesSection.style.display = "none";
       ministerSection.style.display = "block";
-    } else if (ministerRadio && ministerRadio.value === "no") {
+    } else if (ministerRadio && ministerRadio.value === "False") {
       // User is not a minister, go to TCGC section
       ministeriesSection.style.display = "none";
       tcgcSection.style.display = "block";
@@ -140,12 +106,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Next button for TCGC section
   const nextButton8 = document.getElementById("next-button-8");
   nextButton8.addEventListener("click", function () {
-    const memberRadio = document.querySelector("input[name='member']:checked");
-    if (memberRadio && memberRadio.value === "yes") {
+    const memberRadio = document.querySelector(
+      "input[name='are_you_tcgc_member']:checked"
+    );
+    if (memberRadio && memberRadio.value === "True") {
       // User is a member of TCGC, go to IMGC section
       tcgcSection.style.display = "none";
       imgcSection.style.display = "block";
-    } else if (memberRadio && memberRadio.value === "no") {
+    } else if (memberRadio && memberRadio.value === "False") {
       // User does not have dependents, go to First Time section
       tcgcSection.style.display = "none";
       firstTimeSection.style.display = "block";
@@ -171,21 +139,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prev button for First tIme section
   const prevButton10 = document.getElementById("prev-button-10");
   prevButton10.addEventListener("click", function () {
-    firstTimeSection.style.display = "block";
-    tcgcSection.style.display = "none";
+    firstTimeSection.style.display = "none";
+    tcgcSection.style.display = "block";
   });
 
   // Next button for FirstTime section
   const nextButton10 = document.getElementById("next-button-10");
   nextButton10.addEventListener("click", function () {
     const firstTimeRadio = document.querySelector(
-      "input[name='firstTime']:checked"
+      "input[name='first_imgc']:checked"
     );
-    if (firstTimeRadio && firstTimeRadio.value === "yes") {
+    if (firstTimeRadio && firstTimeRadio.value === "True") {
       // User first time, go to expectation section
       firstTimeSection.style.display = "none";
       expectationSection.style.display = "block";
-    } else if (firstTimeRadio && firstTimeRadio.value === "no") {
+    } else if (firstTimeRadio && firstTimeRadio.value === "False") {
       // This is not user first time, go to past section
       firstTimeSection.style.display = "none";
       pastSection.style.display = "block";
@@ -215,27 +183,18 @@ function signUpFields() {
   var email = document.getElementById("email");
   var lname = document.getElementById("lname");
   var fname = document.getElementById("fname");
+  var phone = document.getElementById("phone");
   var gender = document.getElementById("gender");
   var occupation = document.getElementById("occupation");
   var city = document.getElementById("city");
   var country = document.getElementById("country");
-  var age = document.getElementById("age");
+  // var age = document.getElementById("age");
 
   // sections
   const signUpSection = document.getElementById("signUp");
   const conferenceSection = document.getElementById("conference");
   //
-  var fields = [
-    email,
-    lname,
-    fname,
-    phone,
-    gender,
-    occupation,
-    city,
-    country,
-    age,
-  ];
+  var fields = [email, lname, fname, phone, gender, occupation, city, country];
   var emptyFields = [];
 
   for (var i = 0; i < fields.length; i++) {
@@ -254,6 +213,41 @@ function signUpFields() {
   } else {
     signUpSection.style.display = "none";
     conferenceSection.style.display = "block";
+
+    // Reset field borders
+    fields.forEach(function (field) {
+      field.style.borderColor = ""; // Reset to default
+    });
+  }
+}
+
+// Field validation for Attendance Section
+function attendanceFields() {
+  var attendanceSelect = document.getElementById("attendanceSelect");
+
+  // sections
+  const attendanceSection = document.getElementById("attendance");
+  const ministeriesSection = document.getElementById("ministeries");
+  //
+  var fields = [attendanceSelect];
+  var emptyFields = [];
+
+  for (var i = 0; i < fields.length; i++) {
+    if (fields[i].value === "") {
+      emptyFields.push(fields[i]);
+    }
+  }
+
+  if (emptyFields.length > 0) {
+    alert("Please select your mode of attendance.");
+
+    // Highlight empty fields
+    emptyFields.forEach(function (field) {
+      field.style.borderColor = "red";
+    });
+  } else {
+    ministeriesSection.style.display = "block";
+    attendanceSection.style.display = "none";
 
     // Reset field borders
     fields.forEach(function (field) {
@@ -294,5 +288,28 @@ function ministersFields() {
     fields.forEach(function (field) {
       field.style.borderColor = ""; // Reset to default
     });
+  }
+}
+
+// Field validation for Dependent Section
+function dependantFields() {
+  var dependantSection = document.getElementById("dependant");
+  var checkboxes = dependantSection.querySelectorAll("input[type='checkbox']");
+  var isChecked = false;
+  const attendanceSection = document.getElementById("attendance");
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      isChecked = true;
+      break;
+    }
+  }
+
+  if (!isChecked) {
+    alert("Please fill out the Dependant section.");
+    return;
+  } else {
+    dependantSection.style.display = "none";
+    attendanceSection.style.display = "block";
   }
 }

@@ -22,8 +22,8 @@
                     <h6>20th - 26th November, 2023</h6>
                 </div>
                 <hr>
-                <div class="mt-5 px-3">
-                    <form id="signup-form" action="#">
+                <div class="mt-5 px-3 form-container">
+                    <form id="signup-fo" action="#">
 
                         <!-- SignUp Section -->
                         <section class="signUp" id="signUp">
@@ -36,41 +36,42 @@
                             </div>
                             <div class="form-group mt-3">
                                 <label for="lname" class="fw-bold">Surname <span class="text-danger">*</span></label>
-                                <input id="lname" class="form-control" type="text" name="lname" placeholder="Surname">
+                                <input id="lname" class="form-control" type="text" name="surname" placeholder="Surname">
                             </div>
                             <div class="form-group mt-3">
                                 <label for="fname" class="fw-bold">First Name <span class="text-danger">*</span></label>
-                                <input id="fname" class="form-control" type="text" name="fname"
+                                <input id="fname" class="form-control" type="text" name="first_name"
                                     placeholder="First Name">
                             </div>
                             <div class="form-group mt-3">
                                 <label for="phone" class="fw-bold">Phone Number <span
                                         class="text-danger">*</span></label>
-                                <input id="phone" class="form-control" type="tel" name="phone"
+                                <input id="phone" class="form-control" type="tel" name="phone_no"
                                     placeholder="Phone Number">
                             </div>
                             <div class="form-group mt-3">
                                 <label for="gender" class="fw-bold">Gender <span class="text-danger">*</span></label>
                                 <select id="gender" class="form-control" name="gender">
                                     <option value="">Choose</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
                                 </select>
                             </div>
                             <div class="form-group mt-3">
-                                <span class="d-block mb-2" class="fw-bold">Age Range<span
-                                        class="text-danger">*</span></span>
-                                <input type="radio" id="age name=" age" value="below12">
+                                <span class="d-block mb-2" class="fw-bold">Age Range</span>
+                                <input id="below12" type="checkbox" id="below12" name="age_range" value="Below 12">
                                 <label for="below12"> Below 12</label><br>
-                                <input type="radio" id="age" name="age" value="12 to 17">
+                                <input id="secondAge" type="checkbox" id="secondAge" name="age_range" value="12 to 17">
                                 <label for="secondAge"> 12 to 17</label><br>
-                                <input type="radio" id="age" name="age" value="16 to 24">
+                                <input id="thirdAge" type="checkbox" id="thirdAge" name="age_range" value="18 to 24">
                                 <label for="thirdAge">18 to 24</label><br>
-                                <input type="radio" id="age" name="age" value="25 to 34">
+
+                                <input id="fourthAge" type="checkbox" id="fourthAge" name="age_range" value="25 to 34">
                                 <label for="fourthAge">25 to 34</label><br>
-                                <input type="radio" id="age" name="age" value="35 to 44">
+                                <input id="fifthAge" type="checkbox" id="fifthAge" name="age_range" value="35 to 44">
                                 <label for="fifthAge">35 to 44</label><br>
-                                <input type="radio" id="age" name="age" value="45 and above" checked>
+                                <input id="sixthAge" type="checkbox" id="sixthAge" name="age_range"
+                                    value="45 and above">
                                 <label for="sixthAge">45 and above</label>
                             </div>
                             <div class="form-group mt-3">
@@ -78,8 +79,8 @@
                                         class="text-danger">*</span></label>
                                 <select id="occupation" class="form-control" name="occupation">
                                     <option value="">Choose</option>
-                                    <option value="student">Student</option>
-                                    <option value="worker">Worker</option>
+                                    <option value="1">Student</option>
+                                    <option value="2">Worker</option>
                                 </select>
                             </div>
                             <div class="form-group mt-3">
@@ -99,8 +100,8 @@
                         </section>
 
                         <!-- Conference Entry Section -->
-                        <section class="conference" id="conference">
-                            <h5 class="bg-dark text-white p-1">Conference Entry</h5>
+                        <section class="conference" id="conference" id="daySelection">
+                            <h5 class=" bg-dark text-white p-1">Conference Entry</h5>
                             <div class="form-group mt-3">
                                 <span class="d-block mb-2 fw-bold">What Day are you resuming?</span>
                                 <input type="radio" id="day" name="day" value="day1">
@@ -114,21 +115,22 @@
                                 <input type="radio" id="day" name="day" value="day5">
                                 <label for="day5"> Friday (Day 5)</label><br>
                                 <input type="radio" id="day" name="day" value="day6">
-                                <label for="day6"> Monday (Day 1)</label><br>
+                                <label for="day6"> Saturday (Day 6)</label><br>
                                 <input type="radio" id="day" name="day" value="day7">
-                                <label for="day7"> Monday (Day 7)</label><br>
+                                <label for="day7"> Sunday (Day 7)</label><br>
                             </div>
                             <div class="form-group mt-3">
                                 <span class="d-block mb-2 fw-bold">Do you have a dependent? <span
                                         class="text-danger">*</span></span>
-                                <input type="radio" id="yesDependent" name="dependant" value="yes">
+                                <input type="radio" id="yes" name="dependant" value="True">
                                 <label for="yes"> Yes</label><br>
-                                <input type="radio" id="noDependent" name="dependant" value="no">
+                                <input type="radio" id="no" name="dependant" value="False">
                                 <label for="no"> No</label>
                             </div>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-danger" id="prev-button-2">Back</button>
-                                <button type="button" class="btn btn-danger" id="next-button-2">Next</button>
+                                <button type="button" class="btn btn-danger" id="next-button-2"
+                                    onclick="conferenceFields()">Next</button>
                             </div>
                         </section>
 
@@ -147,34 +149,34 @@
                                     </thead>
                                     <tr>
                                         <td>Male</td>
-                                        <td><input type="checkbox" id="year1_male" name="year1_male" value="0-1m">
+                                        <td><input type="checkbox" id="dependant" name="year1_male" value="0-1m">
                                         </td>
-                                        <td><input type="checkbox" id="year2_male" name="year2_male" value="2-4m">
+                                        <td><input type="checkbox" id="dependant" name="year2_male" value="2-4m">
                                         </td>
 
-                                        <td><input type="checkbox" id="year3_male" name="year3_male" value="5-7m">
+                                        <td><input type="checkbox" id="dependant" name="year3_male" value="5-7m">
                                         </td>
-                                        <td><input type="checkbox" id="year4_male" name="year4_male" value="8-10m">
+                                        <td><input type="checkbox" id="dependant" name="year4_male" value="8-10m">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Female</td>
-                                        <td><input type="checkbox" id="year1_female" name="year_female" value="0-1f">
+                                        <td><input type="checkbox" id="dependant" name="year_female" value="0-1f">
                                         </td>
-                                        <td><input type="checkbox" id="year2_female" name="year_female" value="2-4f">
+                                        <td><input type="checkbox" id="dependant" name="year_female" value="2-4f">
                                         </td>
 
-                                        <td><input type="checkbox" id="year3_female" name="year_female" value="5-7f">
+                                        <td><input type="checkbox" id="dependant" name="year_female" value="5-7f">
                                         </td>
-                                        <td><input type="checkbox" id="year4_female" name="year_female" value="8-10f">
+                                        <td><input type="checkbox" id="dependant" name="year_female" value="8-10f">
                                         </td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-danger shadow-sm" id="prev-button-3">Back</button>
-                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
-                                    id="next-button-3">Next</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm" id="next-button-3"
+                                    onclick="dependantFields()">Next</button>
                             </div>
                         </section>
                         <!-- Attendance Section -->
@@ -189,39 +191,14 @@
                                     <option value="online">Online Stream</option>
                                 </select>
                             </div>
-                            <div class="form-group mt-3">
-                                <label for="attendance" class="fw-bold d-block">Are you camping? <span
-                                        class="text-danger">*</span></label>
-                                <input type="radio" id="yesCamping" name="camping" value="yes">
-                                <label for="yes"> Yes</label><br>
-                                <input type="radio" id="noCamping" name="camping" value="no">
-                                <label for="no"> No</label>
-                            </div>
+
                             <div class="mt-4">
                                 <button type="button" class="btn btn-danger shadow-sm" id="prev-button-4">Back</button>
-                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
-                                    id="next-button-4">Next</button>
+                                <button type="button" class="btn btn-danger ms-2 shadow-sm" id="next-button-4"
+                                    onclick="attendanceFields()">Next</button>
                             </div>
                         </section>
 
-                        <!-- Camping facilitySection -->
-                        <section class="camping" id="camping">
-                            <h5 class="bg-dark text-white p-1">Camping</h5>
-                            <div class="form-group  mt-3">
-                                <span class="d-block mb-2 fw-bold">Making your choice of camping facility</span>
-                                <input type="radio" id="hostel" name="camping_facility" value="16 bed hostel">
-                                <label for="yes_camping"> 16 bed hostel</label><br>
-                                <input type="radio" id="guest" name="camping_facility" value="guest house">
-                                <label for="no_camping"> Guest house</label><br>
-                                <input type="radio" id="alt" name="camping_facility" value="alternative">
-                                <label for="alt"> Alternative</label>
-                            </div>
-                            <div class="mt-4">
-                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-5">Back</button>
-                                <button type="button" class="btn btn-danger ms-2 shadow-sm"
-                                    id="next-button-5">Next</button>
-                            </div>
-                        </section>
 
                         <!-- Ministering Section -->
                         <section class="ministeries" id="ministeries">
@@ -229,10 +206,11 @@
                             <div class="form-group  mt-3">
                                 <span class="d-block mb-2 fw-bold">Are you a minister <span
                                         class="text-danger">*</span></span>
-                                <input type="radio" id="yes_minister" name="minister" value="yes">
+                                <input type="radio" id="yes_minister" name="are_you_a_minister" value="True">
                                 <label for="yes_minister"> Yes</label><br>
-                                <input type="radio" id="no_minister" name="minister" value="no">
+                                <input type="radio" id="no_minister" name="are_you_a_minister" value="False">
                                 <label for="no_minister"> No</label>
+
                             </div>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-danger shadow-sm" id="prev-button-6">Back</button>
@@ -246,7 +224,7 @@
                             <h5 class="bg-dark text-white p-1">Ministers </h5>
                             <div class="form-group  mt-3">
                                 <label for="church">Name of Church/Fellowship <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="church" id="church"
+                                <input class="form-control" type="text" name="name_of_fellowship" id="church"
                                     placeholder="Your answer">
                             </div>
                             <div class="mt-4">
@@ -262,9 +240,9 @@
                             <div class="form-group  mt-3">
                                 <span class="d-block mb-2 fw-bold"> Are you a member of TCGC? <span
                                         class="text-danger">*</span></span>
-                                <input type="radio" id="yes" name="member" value="yes">
+                                <input type="radio" id="yes" name="are_you_tcgc_member" value="True">
                                 <label for="yes"> Yes</label><br>
-                                <input type="radio" id="no" name="member" value="no">
+                                <input type="radio" id="no" name="are_you_tcgc_member" value="False">
                                 <label for="no"> No</label>
                             </div>
                             <div class="mt-4">
@@ -279,21 +257,24 @@
                             <h5 class="bg-dark text-white p-1">IMGC'23 Workforce</h5>
                             <div class="form-group  mt-3">
                                 <span class="d-block mb-2 fw-bold"> Are you in a Service Unit?</span>
-                                <input type="radio" id="yesImgc" name="imgc" value="yes">
+                                <input type="radio" id="yes" name="are_you_in_unit" value="True">
                                 <label for="yes"> Yes</label><br>
-                                <input type="radio" id="noImgc" name="imgc" value="no">
+                                <input type="radio" id="no" name="are_you_in_unit" value="False">
                                 <label for="no"> No</label>
+
                             </div>
                             <div class="form-group  mt-3">
                                 <label for="email" class="fw-bold">State the Unit</label>
-                                <input class="form-control" type="email" name="email" placeholder="Your answer here">
+                                <input class="form-control" type="text" name="unit" placeholder="Your answer here">
+
                             </div>
                             <div class="form-group  mt-3">
                                 <span class="d-block mb-2 fw-bold"> Are you interested in daily lunch?</span>
-                                <input type="radio" id="yesLunch" name="lunch" value="yes">
+                                <input type="radio" id="yes" name="lunch" value="True">
                                 <label for="yes"> Yes</label><br>
-                                <input type="radio" id="noLunch" name="lunch" value="no">
-                                <label for="noLunch"> No</label>
+                                <input type="radio" id="no" name="lunch" value="False">
+                                <label for="no"> No</label>
+
                             </div>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-danger shadow-sm" id="prev-button-9">Back</button>
@@ -308,10 +289,10 @@
                             <div class="form-group  mt-3">
                                 <span class="d-block mb-2"> Is this your first time attending IMGC? <span
                                         class="text-danger">*</span></span>
-                                <input type="radio" id="yesFirst" name="firstTime" value="yes">
-                                <label for="yesFirst"> Yes</label><br>
-                                <input type="radio" id="noFirst" name="firstTime" value="no">
-                                <label for="noFirst"> No</label>
+                                <input type="radio" id="yes" name="first_imgc" value="True">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" id="no" name="first_imgc" value="False">
+                                <label for="no"> No</label>
                                 <div class="mt-4">
                                     <button type="button" class="btn btn-danger shadow-sm"
                                         id="prev-button-10">Back</button>
@@ -327,13 +308,14 @@
                             <div class="form-group  mt-3">
                                 <label for="exp" class="fw-bold">What is your expectation for this year's conferece?
                                     <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="exp" id="exp" placeholder="Your answer">
-                            </div>
-                            <div class="mt-4">
-                                <button type="button" class="btn btn-danger shadow-sm" id="prev-button-11">Back</button>
-                                <button type="submit" class="btn btn-success ms-2 shadow-sm" id="next-button-11"
-                                    onclick="expectationFields()">Submit</button>
-                            </div>
+                                <input class="form-control" type="text" name="expectation_for_conf" id="exp"
+                                    placeholder="Your answer" </div>
+                                <div class="mt-4">
+                                    <button type="button" class="btn btn-danger shadow-sm"
+                                        id="prev-button-11">Back</button>
+                                    <button type="submit" class="btn btn-success ms-2 shadow-sm" id="next-button-11"
+                                        onclick="expectationFields()"> Submit</button>
+                                </div>
                         </section>
 
                         <!-- Pass Experience Section -->
@@ -346,7 +328,7 @@
                                     past
                                     conference
                                     <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="exp" id="past_exp"
+                                <input class="form-control" type="text" name="past_experience" id="past_exp"
                                     placeholder="Your answer">
                             </div>
                             <div class="mt-4">
